@@ -1,0 +1,152 @@
+
+/*!
+ * Waves v0.6.0
+ * http://fian.my.id/Waves
+ *
+ * Copyright 2014 Alfiana E. Sibuea and other contributors
+ * Released under the MIT license
+ * https://github.com/fians/Waves/blob/master/LICENSE
+ */
+
+.cpt-pc-load {
+  &.cpt-pc-small-to-medium {
+    .cpt-pc-card-image {
+      span {
+        display: block;
+        width: 100%;
+        height: 160px;
+        background: color('cpt-pc-grey', 'lighten-2');
+        -webkit-animation:linear infinite alternate;
+        -webkit-animation-name: backgroundColor;
+        -webkit-animation-duration: 1s;
+      }
+    }
+  }
+  p {
+    display: block;
+    width: 60%;
+    height: 20px;
+    -webkit-animation:linear infinite alternate;
+    -webkit-animation-name: backgroundColor;
+    -webkit-animation-duration: 1s;
+  }
+
+  a {
+    -webkit-animation:linear infinite alternate;
+    -webkit-animation-name: backgroundColor;
+    -webkit-animation-duration: 1s;
+  }
+
+  @keyframes backgroundColor {
+    0% {
+      background: color('cpt-pc-grey', 'lighten-3');
+    }
+    100% {
+      background: color('cpt-pc-grey', 'lighten-1');
+    }
+  }
+}
+
+.cpt-pc-waves-effect {
+  position: relative;
+  cursor: pointer;
+  display: inline-block;
+  overflow: hidden;
+  user-select: none;
+  -webkit-tap-highlight-color: transparent;
+  vertical-align: middle;
+  z-index: 1;
+  transition: .3s ease-out;
+
+  .cpt-pc-waves-ripple {
+    position: absolute;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    margin-top:-10px;
+    margin-left:-10px;
+    opacity: 0;
+
+    background: rgba(0,0,0,0.2);
+    transition: all 0.7s ease-out;
+    transition-property: transform, opacity;
+    transform: scale(0);
+    pointer-events: none;
+  }
+
+  // Waves Colors
+  &.cpt-pc-waves-light .cpt-pc-waves-ripple {
+    background-color: rgba(255, 255, 255, 0.45);
+  }
+  &.cpt-pc-waves-red .cpt-pc-waves-ripple {
+    background-color: rgba(244, 67, 54, .70);
+  }
+  &.cpt-pc-waves-yellow .cpt-pc-waves-ripple {
+    background-color: rgba(255, 235, 59, .70);
+  }
+  &.cpt-pc-waves-orange .cpt-pc-waves-ripple {
+    background-color: rgba(255, 152, 0, .70);
+  }
+  &.cpt-pc-waves-purple .cpt-pc-waves-ripple {
+    background-color: rgba(156, 39, 176, 0.70);
+  }
+  &.cpt-pc-waves-green .cpt-pc-waves-ripple {
+    background-color: rgba(76, 175, 80, 0.70);
+  }
+  &.cpt-pc-waves-teal .cpt-pc-waves-ripple {
+    background-color: rgba(0, 150, 136, 0.70);
+  }
+
+  // Style input button bug.
+  input[type="button"], input[type="reset"], input[type="submit"] {
+    border: 0;
+    font-style: normal;
+    font-size: inherit;
+    text-transform: inherit;
+    background: none;
+  }
+
+  img {
+    position: relative;
+    z-index: -1;
+  }
+}
+
+.cpt-pc-waves-notransition {
+  transition: none #{"!important"};
+}
+
+.cpt-pc-waves-circle {
+  transform: translateZ(0);
+  -webkit-mask-image: -webkit-radial-gradient(circle, white 100%, black 100%);
+}
+
+.cpt-pc-waves-input-wrapper {
+  border-radius: 0.2em;
+  vertical-align: bottom;
+
+  .cpt-pc-waves-button-input {
+    position: relative;
+    top: 0;
+    left: 0;
+    z-index: 1;
+  }
+}
+
+.cpt-pc-waves-circle {
+  text-align: center;
+  width: 2.5em;
+  height: 2.5em;
+  line-height: 2.5em;
+  border-radius: 50%;
+  -webkit-mask-image: none;
+}
+
+.cpt-pc-waves-block {
+  display: block;
+}
+
+/* Firefox Bug: link not triggered */
+.cpt-pc-waves-effect .cpt-pc-waves-ripple {
+  z-index: -1;
+}

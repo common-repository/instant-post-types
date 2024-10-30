@@ -1,0 +1,16 @@
+<?php
+/**
+ * http://pluginscorner.com
+ *
+ * @package instant-post-types
+ */
+
+if ( ! defined( 'ABSPATH' ) ) {
+	exit; // Silence is golden
+}
+
+?>
+
+<input name="<#= model.get('slug') #>" value="<#= model.get('slug') #>" class="cpt-pc-filled-in cpt-pc-checkbox"
+	<#= Object.values(taxonomy.get('post_types')).indexOf(model.get('slug')) > -1 ? 'checked="checked"' : '' #> id="<#= model.get('slug') #>" type="checkbox">
+<label for="<#= model.get('slug') #>"><#= model.get('labels').singular_name #></label>

@@ -1,0 +1,18 @@
+<?php
+/**
+ * http://pluginscorner.com
+ *
+ * @package instant-post-types
+ */
+
+if ( ! defined( 'ABSPATH' ) ) {
+	exit; // Silence is golden
+}
+
+?>
+
+<div class="cpt-pc-step-container cpt-pc-teal cpt-pc-white-text cpt-pc-step<#= model.get('tutorial_step') #> animated <#= bounce #>">
+    <#= CPT_PCUtils.t['Step' + model.get('tutorial_step')] #>
+    <div class="arrow"></div>
+</div>
+

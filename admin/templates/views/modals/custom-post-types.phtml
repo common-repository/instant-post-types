@@ -1,0 +1,62 @@
+<?php
+/**
+ * http://pluginscorner.com
+ *
+ * @package instant-post-types
+ */
+
+if ( ! defined( 'ABSPATH' ) ) {
+	exit; // Silence is golden
+}
+
+?>
+
+<div class="cpt-pc-material-container">
+	<h3 class="cpt-pc-modal-title"><?php echo __( 'Add Custom Post Type', CPT_PC_Const::T ) ?></h3>
+	<div class="cpt-pc-row">
+		<div class="cpt-pc-col cpt-pc-s3">
+			<a class="cpt-pc-btn cpt-pc-tab cpt-pc-disabled" data-step="0"
+			   href="javascript:void(0)"><?php echo __( 'General', CPT_PC_Const::T ) ?></a>
+		</div>
+		<div class="cpt-pc-col cpt-pc-s3">
+			<a class="cpt-pc-btn cpt-pc-tab" data-step="1"
+			   href="javascript:void(0)"><?php echo __( 'Labels', CPT_PC_Const::T ) ?></a>
+		</div>
+		<div class="cpt-pc-col cpt-pc-s3">
+			<a class="cpt-pc-btn cpt-pc-tab" data-step="2"
+			   href="javascript:void(0)"><?php echo __( 'Advanced', CPT_PC_Const::T ) ?></a>
+		</div>
+	</div>
+	<div class="cpt-pc-modal-step">
+		<div class="cpt-pc-modal-content cpt-pc-general"></div>
+	</div>
+
+	<div class="cpt-pc-modal-step">
+		<div class="cpt-pc-modal-content">
+			<h5><?php echo __( 'Labels', CPT_PC_Const::T ) ?></h5>
+			<div class="cpt-pc-row cpt-pc-labels"></div>
+		</div>
+	</div>
+
+	<div class="cpt-pc-modal-step">
+		<div class="cpt-pc-modal-content cpt-pc-advanced">
+		</div>
+	</div>
+
+	<div class="cpt-pc-modal-footer">
+		<div class="cpt-pc-row">
+			<div class="cpt-pc-col cpt-pc-s6">
+				<a href="javascript:void(0)" class="cpt-pc-btn cpt-pc-grey cpt-pc-waves-light cpt-pc-left cpt-pc-modal-close">
+					<?php echo __( 'Cancel', CPT_PC_Const::T ) ?>
+				</a>
+			</div>
+			<div class="cpt-pc-col cpt-pc-s6">
+				<a href="javascript:void(0)" class="cpt-pc-btn cpt-pc-teal cpt-pc-waves-light cpt-pc-right cpt-pc-save">
+					<?php echo __( 'Save', CPT_PC_Const::T ) ?>
+				</a>
+			</div>
+		</div>
+	</div>
+</div>
+
+

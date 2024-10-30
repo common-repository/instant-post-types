@@ -1,0 +1,215 @@
+.cpt-pc-material-container {
+  nav {
+    &.cpt-pc-nav-extended {
+      height: auto;
+
+      .cpt-pc-nav-wrapper {
+        min-height: $navbar-height-mobile;
+        height: auto;
+      }
+
+      .cpt-pc-nav-content {
+        position: relative;
+        line-height: normal;
+      }
+    }
+
+    color: $navbar-font-color;
+    @extend .cpt-pc-z-depth-1;
+    background-color: $primary-color;
+    width: 100%;
+    height: $navbar-height-mobile;
+    line-height: $navbar-line-height-mobile;
+
+    a {
+      color: $navbar-font-color;
+    }
+
+    i,
+    [class^="mdi-"], [class*="mdi-"],
+    i.cpt-pc-material-icons {
+      display: block;
+      font-size: 24px;
+      height: $navbar-height-mobile;
+      line-height: $navbar-line-height-mobile;
+    }
+
+    .cpt-pc-nav-wrapper {
+      position: relative;
+      height: 100%;
+    }
+
+    @media #{$large-and-up} {
+      a.cpt-pc-button-collapse {
+        display: none;
+      }
+    }
+
+    // Collapse button
+    .cpt-pc-button-collapse {
+      float: left;
+      position: relative;
+      z-index: 1;
+      height: $navbar-height-mobile;
+      margin: 0 18px;
+
+      i {
+        height: $navbar-height-mobile;
+        line-height: $navbar-line-height-mobile;
+      }
+    }
+
+    // Logo
+    .cpt-pc-brand-logo {
+      position: absolute;
+      color: $navbar-font-color;
+      display: inline-block;
+      font-size: $navbar-brand-font-size;
+      padding: 0;
+      white-space: nowrap;
+
+      &.cpt-pc-center {
+        left: 50%;
+        transform: translateX(-50%);
+      }
+
+      @media #{$medium-and-down} {
+        left: 50%;
+        transform: translateX(-50%);
+
+        &.cpt-pc-left, &.cpt-pc-right {
+          padding: 0;
+          transform: none;
+        }
+
+        &.cpt-pc-left {
+          left: 0.5rem;
+        }
+        &.cpt-pc-right {
+          right: 0.5rem;
+          left: auto;
+        }
+      }
+
+      &.cpt-pc-right {
+        right: 0.5rem;
+        padding: 0;
+      }
+
+      i,
+      [class^="mdi-"], [class*="mdi-"],
+      i.cpt-pc-material-icons {
+        float: left;
+        margin-right: 15px;
+      }
+    }
+
+    // Title
+    .cpt-pc-nav-title {
+      display: inline-block;
+      font-size: 32px;
+      padding: 28px 0;
+    }
+
+    // Navbar Links
+    ul {
+      margin: 0;
+
+      li {
+        transition: background-color .3s;
+        float: left;
+        padding: 0;
+
+        &.cpt-pc-active {
+          background-color: rgba(0, 0, 0, .1);
+        }
+      }
+      a {
+        transition: background-color .3s;
+        font-size: $navbar-font-size;
+        color: $navbar-font-color;
+        display: block;
+        padding: 0 15px;
+        cursor: pointer;
+
+        &.cpt-pc-btn, &.cpt-pc-btn-large, &.cpt-pc-btn-flat, &.cpt-pc-btn-floating {
+          margin-top: -2px;
+          margin-left: 15px;
+          margin-right: 15px;
+
+          & > .cpt-pc-material-icons {
+            height: inherit;
+            line-height: inherit;
+          }
+        }
+
+        &:hover {
+          background-color: rgba(0, 0, 0, .1);
+        }
+      }
+
+      &.cpt-pc-left {
+        float: left;
+      }
+    }
+
+    // Navbar Search Form
+    form {
+      height: 100%;
+    }
+
+    .cpt-pc-input-field {
+      margin: 0;
+      height: 100%;
+
+      input {
+        height: 100%;
+        font-size: 1.2rem;
+        border: none;
+        padding-left: 2rem;
+
+        &:focus, &[type=text]:valid, &[type=password]:valid,
+        &[type=email]:valid, &[type=url]:valid, &[type=date]:valid {
+          border: none;
+          box-shadow: none;
+        }
+      }
+
+      label {
+        top: 0;
+        left: 0;
+
+        i {
+          color: rgba(255, 255, 255, .7);
+          transition: color .3s;
+        }
+        &.cpt-pc-active i {
+          color: $navbar-font-color;
+        }
+      }
+    }
+  }
+
+  // Fixed Navbar
+  .cpt-pc-navbar-fixed {
+    position: relative;
+    height: $navbar-height-mobile;
+    z-index: 997;
+
+    nav {
+      position: fixed;
+    }
+  }
+  @media #{$medium-and-up} {
+    nav.cpt-pc-nav-extended .cpt-pc-nav-wrapper {
+      min-height: $navbar-height;
+    }
+    nav, nav .cpt-pc-nav-wrapper i, nav a.cpt-pc-button-collapse, nav a.cpt-pc-button-collapse i {
+      height: $navbar-height;
+      line-height: $navbar-line-height;
+    }
+    .cpt-pc-navbar-fixed {
+      height: $navbar-height;
+    }
+  }
+}

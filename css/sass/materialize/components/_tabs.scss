@@ -1,0 +1,99 @@
+.cpt-pc-tabs {
+  &.cpt-pc-tabs-transparent {
+    background-color: transparent;
+
+    .cpt-pc-tab a,
+    .cpt-pc-tab.cpt-pc-disabled a,
+    .cpt-pc-tab.cpt-pc-disabled a:hover {
+      color: rgba(255,255,255,0.7);
+    }
+
+    .cpt-pc-tab a:hover,
+    .cpt-pc-tab a.cpt-pc-active {
+      color: #fff;
+    }
+
+    .cpt-pc-indicator {
+      background-color: #fff;
+    }
+  }
+
+  &.cpt-pc-tabs-fixed-width {
+    display: flex;
+
+    .cpt-pc-tab {
+      -webkit-box-flex: 1;
+      -webkit-flex-grow: 1;
+          -ms-flex-positive: 1;
+              flex-grow: 1;
+    }
+  }
+
+  position: relative;
+  overflow-x: auto;
+  overflow-y: hidden;
+  height: 48px;
+  width: 100%;
+  background-color: $tabs-bg-color;
+  margin: 0 auto;
+  white-space: nowrap;
+
+  .cpt-pc-tab {
+    display: inline-block;
+    text-align: center;
+    line-height: 48px;
+    height: 48px;
+    padding: 0;
+    margin: 0;
+    text-transform: uppercase;
+
+    a {
+      &:hover,
+      &.cpt-pc-active {
+        background-color: transparent;
+        color: $tabs-text-color;
+      }
+
+      color: rgba($tabs-text-color, .7);
+      display: block;
+      width: 100%;
+      height: 100%;
+      padding: 0 24px;
+      font-size: 14px;
+      text-overflow: ellipsis;
+      overflow: hidden;
+      transition: color .28s ease;
+    }
+
+    &.cpt-pc-disabled a,
+    &.cpt-pc-disabled a:hover {
+      color: rgba($tabs-text-color, .7);
+      cursor: default;
+    }
+  }
+  .cpt-pc-indicator {
+    position: absolute;
+    bottom: 0;
+    height: 2px;
+    background-color: $tabs-underline-color;
+    will-change: left, right;
+  }
+}
+
+// Fixed sideNav hide on smaller
+@media #{$medium-and-down} {
+  .cpt-pc-tabs {
+    display: flex;
+
+    .cpt-pc-tab {
+      -webkit-box-flex: 1;
+      -webkit-flex-grow: 1;
+      -ms-flex-positive: 1;
+      flex-grow: 1;
+
+      a {
+        padding: 0 12px;
+      }
+    }
+  }
+}

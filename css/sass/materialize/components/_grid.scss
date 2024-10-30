@@ -1,0 +1,147 @@
+.cpt-pc-material-container {
+  .cpt-pc-container {
+    max-width: 1700px;
+    width: 90%;
+  }
+  @media #{$medium-and-up} {
+    .cpt-pc-container {
+      width: 85%;
+    }
+  }
+  @media #{$large-and-up} {
+    .cpt-pc-container {
+      width: 98%;
+    }
+  }
+  .cpt-pc-container .cpt-pc-row {
+    margin-left: (-1 * $gutter-width / 2);
+    margin-right: (-1 * $gutter-width / 2);
+  }
+
+  .cpt-pc-section {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+
+    &.cpt-pc-no-pad {
+      padding: 0;
+    }
+    &.cpt-pc-no-pad-bot {
+      padding-bottom: 0;
+    }
+    &.cpt-pc-no-pad-top {
+      padding-top: 0;
+    }
+  }
+
+  .cpt-pc-row {
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 20px;
+
+    // Clear floating children
+    &:after {
+      content: "";
+      display: table;
+      clear: both;
+    }
+
+    .cpt-pc-col {
+      float: left;
+      box-sizing: border-box;
+      padding: 0 $gutter-width / 2;
+      min-height: 1px;
+
+      &[class*="push-"],
+      &[class*="pull-"] {
+        position: relative;
+      }
+
+      $i: 1;
+      @while $i <= $num-cols {
+        $perc: unquote((100 / ($num-cols / $i)) + "%");
+        &.cpt-pc-s#{$i} {
+          width: $perc;
+          margin-left: auto;
+          left: auto;
+          right: auto;
+        }
+        $i: $i + 1;
+      }
+
+      $i: 1;
+      @while $i <= $num-cols {
+        $perc: unquote((100 / ($num-cols / $i)) + "%");
+        &.cpt-pc-offset-s#{$i} {
+          margin-left: $perc;
+        }
+        &.cpt-pc-pull-s#{$i} {
+          right: $perc;
+        }
+        &.cpt-pc-push-s#{$i} {
+          left: $perc;
+        }
+        $i: $i + 1;
+      }
+
+      @media #{$medium-and-up} {
+
+        $i: 1;
+        @while $i <= $num-cols {
+          $perc: unquote((100 / ($num-cols / $i)) + "%");
+          &.cpt-pc-m#{$i} {
+            width: $perc;
+            margin-left: auto;
+            left: auto;
+            right: auto;
+          }
+          $i: $i + 1
+        }
+
+        $i: 1;
+        @while $i <= $num-cols {
+          $perc: unquote((100 / ($num-cols / $i)) + "%");
+          &.cpt-pc-offset-m#{$i} {
+            margin-left: $perc;
+          }
+          &.cpt-pc-pull-m#{$i} {
+            right: $perc;
+          }
+          &.cpt-pc-push-m#{$i} {
+            left: $perc;
+          }
+          $i: $i + 1;
+        }
+      }
+
+      @media #{$large-and-up} {
+
+        $i: 1;
+        @while $i <= $num-cols {
+          $perc: unquote((100 / ($num-cols / $i)) + "%");
+          &.cpt-pc-l#{$i} {
+            width: $perc;
+            margin-left: auto;
+            left: auto;
+            right: auto;
+          }
+          $i: $i + 1;
+        }
+
+        $i: 1;
+        @while $i <= $num-cols {
+          $perc: unquote((100 / ($num-cols / $i)) + "%");
+          &.cpt-pc-offset-l#{$i} {
+            margin-left: $perc;
+          }
+          &.cpt-pc-pull-l#{$i} {
+            right: $perc;
+          }
+          &.cpt-pc-push-l#{$i} {
+            left: $perc;
+          }
+          $i: $i + 1;
+        }
+      }
+    }
+  }
+}

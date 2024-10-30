@@ -1,0 +1,26 @@
+<?php
+/**
+ * http://pluginscorner.com
+ *
+ * @package instant-post-types
+ */
+if ( ! defined( 'ABSPATH' ) ) {
+	exit; // Silence is golden
+}
+
+?>
+<div class="animated bounceInDown">
+	<div class="cpt-pc-card cpt-pc-options-container">
+		<h5 class="cpt-pc-title"><?php echo __( 'Post Types', CPT_PC_Const::T ) ?></h5>
+		<div class="cpt-pc-row cpt-pc-no-margin cpt-pc-post-types"></div>
+		<div class="cpt-pc-col cpt-pc-s12 cpt-pc-m2">
+			<a href="javascript:void(0)" class="cpt-pc-btn ect-add-cpt"><?php echo __( 'Add Custom Post Type', CPT_PC_Const::T ) ?></a>
+		</div>
+		<h5 class="cpt-pc-title"><?php echo __( 'Taxonomies', CPT_PC_Const::T ) ?></h5>
+		<div class="cpt-pc-row cpt-pc-no-margin cpt-pc-taxonomies"></div>
+		<div class="cpt-pc-col cpt-pc-s12 cpt-pc-m2">
+			<a href="javascript:void(0)" class="cpt-pc-btn"><?php echo __( 'Add Custom Taxonomy', CPT_PC_Const::T ) ?></a>
+		</div>
+	</div>
+	<a href="javascript:void(0)" class="ect-show-options cpt-pc-btn cpt-pc-btn-block"><?php echo __( 'Custom Post Types Options', CPT_PC_Const::T ) ?></a>
+</div>

@@ -1,0 +1,89 @@
+<?php
+/**
+ * http://pluginscorner.com
+ *
+ * @package instant-post-types
+ */
+
+if ( ! defined( 'ABSPATH' ) ) {
+	exit; // Silence is golden
+}
+
+?>
+
+<h5><?php echo __( 'General Settings', CPT_PC_Const::T ) ?></h5>
+<div class="cpt-pc-row cpt-pc-no-margin">
+	<div class="cpt-pc-col cpt-pc-s4 cpt-pc-input-field">
+		<input placeholder="Post Type Name" name="singular_name" value="<#= model.get('labels').singular_name #>" id="cpt-pc-name" type="text">
+		<label for="cpt-pc-name"><?php echo __( 'Name', CPT_PC_Const::T ) ?></label>
+	</div>
+	<div class="cpt-pc-col cpt-pc-s4 cpt-pc-input-field">
+		<input placeholder="Post Type Slug" name="slug" value="<#= model.get('slug') #>" id="cpt-pc-slug" data-field="slug" class="cpt-pc-input-change" type="text">
+		<label for="cpt-pc-slug"><?php echo __( 'Handle', CPT_PC_Const::T ) ?></label>
+		<i class="cpt-pc-material-icons cpt-pc-info-icon cpt-pc-tooltipped" data-position="top"
+		   data-tooltip="Max. 20 characters, cannot contain capital letters or spaces">info_outline</i>
+	</div>
+    <div class="cpt-pc-col cpt-pc-s4 cpt-pc-input-field">
+        <input placeholder="Dashicon" name="menu_icon" class="cpt-pc-input-change" value="<#= model.get('menu_icon') #>" id="cpt-pc-menu_icon" type="text">
+        <label for="cpt-pc-menu_icon"><?php echo __( 'Menu Icon', CPT_PC_Const::T ) ?></label>
+        <i class="cpt-pc-material-icons cpt-pc-info-icon cpt-pc-tooltipped" data-position="top"
+           data-tooltip="The url to the icon to be used for this menu. Pass a base64-encoded SVG using a data URI, which will be colored to match the color scheme -- this should begin with 'data:image/svg+xml;base64,'. Pass the name of a Dashicons helper class to use a font icon, e.g. 'dashicons-chart-pie'. Pass 'none' to leave div.wp-menu-image empty so an icon can be added via CSS. Defaults to use the posts icon.">info_outline</i>
+    </div>
+</div>
+
+<div class="cpt-pc-row cpt-pc-no-margin">
+	<div class="cpt-pc-col cpt-pc-s12 cpt-pc-input-field">
+		<textarea id="cpt-pc-description" name="description" class="cpt-pc-materialize-textarea cpt-pc-input-change"><#= model.get('description') #></textarea>
+		<label for="cpt-pc-description"><?php echo __( 'Description', CPT_PC_Const::T ) ?></label>
+	</div>
+</div>
+<div class="cpt-pc-row cpt-pc-no-margin">
+	<div class="cpt-pc-col cpt-pc-s3">
+		<label for="cpt-pc-public"><?php echo __( 'Public ?', CPT_PC_Const::T ) ?></label>
+		<div class="cpt-pc-switch">
+			<label>
+				<?php echo __( 'No', CPT_PC_Const::T ) ?>
+				<input id="cpt-pc-public" name="public" <#= model.get('public') ? 'checked="checked"' : '' #> type="checkbox">
+				<span class="cpt-pc-lever"></span>
+				<?php echo __( 'Yes', CPT_PC_Const::T ) ?>
+			</label>
+		</div>
+	</div>
+	<div class="cpt-pc-col cpt-pc-s3">
+		<label for="ect-cpt-ui"><?php echo __( 'Show in the UI ?', CPT_PC_Const::T ) ?></label>
+		<div class="cpt-pc-switch">
+			<label>
+				<?php echo __( 'No', CPT_PC_Const::T ) ?>
+				<input id="ect-cpt-ui" name="show_ui" <#= model.get('show_ui') ? 'checked="checked"' : '' #> type="checkbox">
+				<span class="cpt-pc-lever"></span>
+				<?php echo __( 'Yes', CPT_PC_Const::T ) ?>
+			</label>
+		</div>
+	</div>
+	<div class="cpt-pc-col cpt-pc-s3">
+		<label for="ect-cpt-menu"><?php echo __( 'Show in the Menu ?', CPT_PC_Const::T ) ?></label>
+		<div class="cpt-pc-switch">
+			<label>
+				<?php echo __( 'No', CPT_PC_Const::T ) ?>
+				<input id="ect-cpt-menu" name="show_in_menu" <#= model.get('show_in_menu') ? 'checked="checked"' : '' #> type="checkbox">
+				<span class="cpt-pc-lever"></span>
+				<?php echo __( 'Yes', CPT_PC_Const::T ) ?>
+			</label>
+		</div>
+	</div>
+	<div class="cpt-pc-col cpt-pc-s3">
+		<label for="ect-cpt-hierarchical"><?php echo __( 'Is this post type hierarchical ?', CPT_PC_Const::T ) ?></label>
+		<div class="cpt-pc-switch">
+			<label>
+				<?php echo __( 'No', CPT_PC_Const::T ) ?>
+				<input id="ect-cpt-hierarchical" name="hierarchical" <#= model.get('hierarchical') ? 'checked="checked"' : '' #> type="checkbox">
+				<span class="cpt-pc-lever"></span>
+				<?php echo __( 'Yes', CPT_PC_Const::T ) ?>
+			</label>
+		</div>
+	</div>
+	<div class="cpt-pc-col cpt-pc-s3">
+		<label for="ect-cpt-ui"><?php echo __( 'Attach Custom Taxonomy', CPT_PC_Const::T ) ?></label>
+        <div class="cpt-pc-taxonomies cpt-pc-row"></div>
+	</div>
+</div>

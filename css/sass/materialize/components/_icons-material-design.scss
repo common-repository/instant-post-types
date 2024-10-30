@@ -1,0 +1,7 @@
+.cpt-pc-material-container {
+  /* This is needed for some mobile phones to display the Google Icon font properly */
+  .cpt-pc-material-icons {
+    text-rendering: optimizeLegibility;
+    font-feature-settings: 'liga';
+  }
+}

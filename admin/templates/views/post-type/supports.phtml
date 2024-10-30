@@ -1,0 +1,79 @@
+<?php
+/**
+ * http://pluginscorner.com
+ *
+ * @package instant-post-types
+ */
+
+if ( ! defined( 'ABSPATH' ) ) {
+	exit; // Silence is golden
+}
+
+?>
+
+<div class="cpt-pc-col cpt-pc-s3">
+	<input name="title" class="cpt-pc-filled-in cpt-pc-checkbox"
+	<#= Object.values(model.get('supports')).indexOf('title') > -1 ? 'checked="checked"' : '' #> id="cpt-pc-supports-title" type="checkbox">
+		<label for="cpt-pc-supports-title"><?php echo __( 'Title', CPT_PC_Const::T ) ?></label>
+</div>
+
+<div class="cpt-pc-col cpt-pc-s3">
+	<input name="editor" class="cpt-pc-filled-in cpt-pc-checkbox"
+	<#= Object.values(model.get('supports')).indexOf('editor') > -1 ? 'checked="checked"' : '' #> id="cpt-pc-supports-editor" type="checkbox">
+		<label for="cpt-pc-supports-editor"><?php echo __( 'Editor', CPT_PC_Const::T ) ?></label>
+</div>
+
+<div class="cpt-pc-col cpt-pc-s3">
+	<input name="author" class="cpt-pc-filled-in cpt-pc-checkbox"
+	<#= Object.values(model.get('supports')).indexOf('author') > -1 ? 'checked="checked"' : '' #> id="cpt-pc-supports-author" type="checkbox">
+		<label for="cpt-pc-supports-author"><?php echo __( 'Author', CPT_PC_Const::T ) ?></label>
+</div>
+
+<div class="cpt-pc-col cpt-pc-s3">
+	<input name="thumbnail" class="cpt-pc-filled-in cpt-pc-checkbox"
+	<#= Object.values(model.get('supports')).indexOf('thumbnail') > -1 ? 'checked="checked"' : '' #> id="cpt-pc-supports-thumbnail" type="checkbox">
+		<label for="cpt-pc-supports-thumbnail"><?php echo __( 'Featured Image', CPT_PC_Const::T ) ?></label>
+</div>
+
+<div class="cpt-pc-col cpt-pc-s3">
+	<input name="excerpt" class="cpt-pc-filled-in cpt-pc-checkbox"
+	<#= Object.values(model.get('supports')).indexOf('excerpt') > -1 ? 'checked="checked"' : '' #> id="cpt-pc-supports-excerpt" type="checkbox">
+		<label for="cpt-pc-supports-excerpt"><?php echo __( 'Excerpt', CPT_PC_Const::T ) ?></label>
+</div>
+
+<div class="cpt-pc-col cpt-pc-s3">
+	<input name="trackbacks" class="cpt-pc-filled-in cpt-pc-checkbox"
+	<#= Object.values(model.get('supports')).indexOf('trackbacks') > -1 ? 'checked="checked"' : '' #> id="cpt-pc-supports-trackbacks" type="checkbox">
+		<label for="cpt-pc-supports-trackbacks"><?php echo __( 'Trackbacks', CPT_PC_Const::T ) ?></label>
+</div>
+
+<div class="cpt-pc-col cpt-pc-s3">
+	<input name="custom-fields" class="cpt-pc-filled-in cpt-pc-checkbox"
+	<#= Object.values(model.get('supports')).indexOf('custom-fields') > -1 ? 'checked="checked"' : '' #> id="cpt-pc-supports-custom-fields" type="checkbox">
+		<label for="cpt-pc-supports-custom-fields"><?php echo __( 'Custom Fields', CPT_PC_Const::T ) ?></label>
+</div>
+
+<div class="cpt-pc-col cpt-pc-s3">
+	<input name="comments" class="cpt-pc-filled-in cpt-pc-checkbox"
+	<#= Object.values(model.get('supports')).indexOf('comments') > -1 ? 'checked="checked"' : '' #> id="cpt-pc-supports-comments" type="checkbox">
+		<label for="cpt-pc-supports-comments"><?php echo __( 'Comments', CPT_PC_Const::T ) ?></label>
+</div>
+
+<div class="cpt-pc-col cpt-pc-s3">
+	<input name="revisions" class="cpt-pc-filled-in cpt-pc-checkbox"
+	<#= Object.values(model.get('supports')).indexOf('revisions') > -1 ? 'checked="checked"' : '' #> id="cpt-pc-supports-revisions" type="checkbox">
+		<label for="cpt-pc-supports-revisions"><?php echo __( 'Rrevisions', CPT_PC_Const::T ) ?></label>
+</div>
+
+<div class="cpt-pc-col cpt-pc-s3">
+	<input name="page-attributes" class="cpt-pc-filled-in cpt-pc-checkbox"
+	<#= Object.values(model.get('supports')).indexOf('page-attributes') > -1 ? 'checked="checked"' : '' #> id="cpt-pc-supports-page-attributes"
+		type="checkbox">
+		<label for="cpt-pc-supports-page-attributes"><?php echo __( 'Page Attributes', CPT_PC_Const::T ) ?></label>
+</div>
+
+<div class="cpt-pc-col cpt-pc-s3">
+	<input name="post-formats" class="cpt-pc-filled-in cpt-pc-checkbox"
+	<#= Object.values(model.get('supports')).indexOf('post-formats') > -1 ? 'checked="checked"' : '' #> id="cpt-pc-supports-post-formats" type="checkbox">
+		<label for="cpt-pc-supports-post-formats"><?php echo __( 'Post Formats', CPT_PC_Const::T ) ?></label>
+</div>

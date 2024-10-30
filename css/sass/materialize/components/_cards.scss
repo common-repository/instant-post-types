@@ -1,0 +1,216 @@
+.cpt-pc-material-container {
+
+  .cpt-pc-card-panel {
+    transition: box-shadow .25s;
+    padding: $card-padding;
+    margin: $element-top-margin 0 $element-bottom-margin 0;
+    border-radius: 2px;
+    @extend .cpt-pc-z-depth-1;
+    background-color: $card-bg-color;
+  }
+
+  .cpt-pc-card {
+    position: relative;
+    margin: $element-top-margin 0 $element-bottom-margin 0;
+    background-color: $card-bg-color;
+    transition: box-shadow .25s;
+    border-radius: 2px;
+    @extend .cpt-pc-z-depth-1;
+
+    .cpt-pc-card-title {
+      font-size: 24px;
+      font-weight: 300;
+      &.cpt-pc-activator {
+        cursor: pointer;
+      }
+    }
+
+    // Card Sizes
+    &.cpt-pc-small, &.cpt-pc-medium, &.cpt-pc-small-to-medium, &.cpt-pc-large {
+      position: relative;
+
+      .cpt-pc-card-image {
+        max-height: 60%;
+        overflow: hidden;
+      }
+      .cpt-pc-card-image + .cpt-pc-ard-content {
+        max-height: 40%;
+      }
+      .cpt-pc-card-content {
+        max-height: 100%;
+        overflow: hidden;
+      }
+      .cpt-pc-card-action {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+      }
+    }
+
+    &.cpt-pc-small {
+      height: 300px;
+    }
+
+    &.cpt-pc-small-to-medium {
+      height: 350px;
+    }
+
+    &.cpt-pc-medium {
+      height: 400px;
+    }
+
+    &.cpt-pc-large {
+      height: 500px;
+    }
+
+    // Horizontal Cards
+    &.cpt-pc-horizontal {
+      &.cpt-pc-small, &.cpt-pc-medium, &.cpt-pc-large {
+        .card-image {
+          height: 100%;
+          max-height: none;
+          overflow: visible;
+
+          img {
+            height: 100%;
+          }
+        }
+      }
+
+      display: flex;
+
+      .cpt-pc-card-image {
+        max-width: 50%;
+        img {
+          border-radius: 2px 0 0 2px;
+          max-width: 100%;
+          width: auto;
+        }
+      }
+
+      .cpt-pc-card-stacked {
+        display: flex;
+        flex-direction: column;
+        flex: 1;
+        position: relative;
+
+        .cpt-pc-card-content {
+          flex-grow: 1;
+        }
+      }
+    }
+
+    // Sticky Action Section
+    &.cpt-pc-sticky-action {
+      .cpt-pc-card-action {
+        z-index: 2;
+      }
+
+      .cpt-pc-card-reveal {
+        z-index: 1;
+        padding-bottom: 64px;
+        .cpt-pc-close-reveal {
+          cursor: pointer;
+          position: absolute;
+          right: 12px;
+          top: 14px;
+        }
+      }
+    }
+
+    .cpt-pc-card-image {
+      position: relative;
+
+      // Image background for content
+      img {
+        display: block;
+        border-radius: 2px 2px 0 0;
+        position: relative;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        width: 100%;
+      }
+
+      .cpt-pc-card-title {
+        color: $card-bg-color;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        max-width: 100%;
+        padding: $card-padding;
+      }
+    }
+
+    .cpt-pc-card-content {
+      padding: $card-padding;
+      border-radius: 0 0 2px 2px;
+
+      p {
+        margin: 0;
+        color: inherit;
+      }
+      .cpt-pc-card-title {
+        display: block;
+        line-height: 32px;
+        margin-bottom: 8px;
+
+        i {
+          line-height: 32px;
+        }
+      }
+    }
+
+    .cpt-pc-card-action {
+      position: relative;
+      background-color: inherit;
+      border-top: 1px solid rgba(160, 160, 160, .2);
+      padding: 16px $card-padding;
+
+      a:not(.cpt-pc-btn):not(.cpt-pc-btn-large):not(.cpt-pc-btn-floating) {
+        color: $card-link-color;
+        margin-right: $card-padding;
+        transition: color .3s ease;
+        text-transform: uppercase;
+
+        &:hover {
+          color: $card-link-color-light;
+        }
+      }
+    }
+
+    .cpt-pc-card-reveal {
+      padding: $card-padding;
+      position: absolute;
+      background-color: $card-bg-color;
+      width: 100%;
+      overflow-y: auto;
+      left: 0;
+      top: 100%;
+      height: 100%;
+      z-index: 3;
+      display: none;
+
+      .cpt-pc-card-title {
+        //cursor: pointer;
+        display: block;
+      }
+    }
+  }
+}
+
+.cpt-pc-card.cpt-pc-preloader-overlay {
+  &:before {
+    background: rgba(#fff, .8);
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 3;
+  }
+}

@@ -1,0 +1,48 @@
+.cpt-pc-material-container {
+  // Badges
+  span.cpt-pc-badge {
+    min-width: 3rem;
+    padding: 0 6px;
+    margin-left: 14px;
+    text-align: center;
+    font-size: 1rem;
+    line-height: $badge-height;
+    height: $badge-height;
+    color: color('cpt-pc-grey', 'darken-1');
+    float: right;
+    box-sizing: border-box;
+
+    &.cpt-pc-new {
+      font-weight: 300;
+      font-size: 0.8rem;
+      color: #fff;
+      background-color: $badge-bg-color;
+      border-radius: 2px;
+    }
+    &.cpt-pc-new:after {
+      content: " new";
+    }
+
+    &[data-badge-caption]::after {
+      content: " " attr(data-badge-caption);
+    }
+  }
+  nav ul a span.cpt-pc-badge {
+    display: inline-block;
+    float: none;
+    margin-left: 4px;
+    line-height: $badge-height;
+    height: $badge-height;
+  }
+
+  // Line height centering
+  .cpt-pc-collection-item span.cpt-pc-badge {
+    margin-top: calc(#{$collection-line-height / 2} - #{$badge-height / 2});
+  }
+  .cpt-pc-collapsible span.cpt-pc-badge {
+    margin-top: calc(#{$collapsible-line-height / 2} - #{$badge-height / 2});
+  }
+  .cpt-pc-side-nav span.cpt-pc-badge {
+    margin-top: calc(#{$sidenav-line-height / 2} - #{$badge-height / 2});
+  }
+}

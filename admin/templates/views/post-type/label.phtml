@@ -1,0 +1,19 @@
+<?php
+/**
+ * http://pluginscorner.com
+ *
+ * @package instant-post-types
+ */
+
+if ( ! defined( 'ABSPATH' ) ) {
+	exit; // Silence is golden
+}
+
+?>
+
+<div class="cpt-pc-col cpt-pc-s4 cpt-pc-input-field">
+	<input placeholder="<#= CPT_PCUtils.util.inflect.readable(model.get('key')) #>" id="ect-cpt-labels-<#= model.get('key') #>" name="<#= model.get('key') #>" value="<#= model.get('value') #>" class="cpt-pc-input-change" type="text">
+	<label for="ect-cpt-labels-<#= model.get('key') #>"><#= CPT_PCUtils.util.inflect.readable(model.get('key')) #></label>
+	<i class="cpt-pc-info-icon cpt-pc-tooltipped cpt-pc-material-icons" data-position="top"
+	   data-tooltip="<#= CPT_PCUtils.t.tooltips[model.get('key')] #>">info_outline</i>
+</div>

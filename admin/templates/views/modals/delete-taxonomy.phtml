@@ -1,0 +1,34 @@
+<?php
+/**
+ * http://pluginscorner.com
+ *
+ * @package instant-post-types
+ */
+
+if ( ! defined( 'ABSPATH' ) ) {
+	exit; // Silence is golden
+}
+
+?>
+
+<div class="cpt-pc-material-container">
+	<h3 class="cpt-pc-modal-title"><?php echo __( 'Delete Custom Taxonomy', CPT_PC_Const::T ) ?></h3>
+
+    <div class="cpt-pc-modal-content">
+        <p><?php _e( 'Are you sure you want to delete this Custom Taxonomy ?' ) ?></p>
+    </div>
+	<div class="cpt-pc-modal-footer">
+		<div class="cpt-pc-row">
+			<div class="cpt-pc-col cpt-pc-s6">
+				<a href="javascript:void(0)" class="cpt-pc-btn cpt-pc-grey cpt-pc-waves-light cpt-pc-left cpt-pc-modal-close">
+					<?php echo __( 'No', CPT_PC_Const::T ) ?>
+				</a>
+			</div>
+			<div class="cpt-pc-col cpt-pc-s6">
+				<a href="javascript:void(0)" class="cpt-pc-btn cpt-pc-red cpt-pc-waves-light cpt-pc-right cpt-pc-yes">
+					<?php echo __( 'Yes', CPT_PC_Const::T ) ?>
+				</a>
+			</div>
+		</div>
+	</div>
+</div>
